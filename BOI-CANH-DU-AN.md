@@ -27,7 +27,8 @@
 - Gói vật tư tiêu chuẩn: gạch granite VN 60x120, sơn Dulux/Jotun, cửa nhôm Xingfa kính cường lực, thiết bị WC Inax/American Standard, đèn Panasonic/Philips.
 - Mái giữ nguyên: mái Nhật 4 mái, dốc 30°, đua 0,8 m, kèo thép mạ kẽm, ngói phẳng xám đen.
 - Điện nước đi âm (dây Cadivi, PPR, PVC Bình Minh/Tiền Phong), bồn inox + bơm tăng áp. Làm thêm từ đầu: ống chờ máy lạnh 6 phòng, điện nước âm sàn tới đảo bếp, ống chờ nước nóng 4 WC, LAN + camera âm, ổ cắm ngoài trời, điện nước ngầm tới WC sân và kho giặt (25–40 triệu).
-- Nhà chính ≈ 2,8 tỷ có dự phòng 10%. Đất có sẵn, thiết kế ý tưởng có sẵn. Chưa gồm nội thất (~0,45 tỷ), garage + rào + sân lát (~0,37 tỷ), chòi và cây (làm sau), san lấp nền.
+- Ngân sách theo giá Phan Thiết: nhà chính 2,5–2,7 tỷ có dự phòng; cả nhà + rào cổng + garage + sân lát + dự phòng ≈ 2,84–3,15 tỷ. Chưa gồm nội thất (~0,4 tỷ), chòi và cây, san lấp, chuyển mục đích đất.
+- Pháp lý: đất ngoại ô Phan Thiết nhiều khả năng thuộc phường nên phải xin giấy phép; cần kiểm tra phần đất ở trong sổ đỏ đủ cho ~280 m² nhà + garage.
 
 ## File có sẵn trong thư mục này
 - mat-bang-nha-12x50.html / .png: mặt bằng tổng thể, mặt bằng công năng, bảng diện tích, nội thất, dự toán thô.
