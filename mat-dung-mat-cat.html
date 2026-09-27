@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mặt đứng mặt cắt</title>
+<style>
+  :root{--bg:#f6f4ef;--paper:#fff;--ink:#1f2328;--muted:#6b7280;--line:#d6d3cc;
+    --wall:#f4f2ec;--wallline:#2b2f36;--roof:#4b4f55;--wood:#b5763f;--glass:#a9c9dd;--cut:#2b2f36;--ground:#8fae6e;--sky:#eef4f8;--inside:#fbf7ee}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 16px 64px}
+  h1{font-size:26px;margin:0 0 4px} h2{font-size:18px;margin:32px 0 8px}
+  .sub{color:var(--muted);margin:0 0 16px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px;overflow:auto}
+  svg{display:block;max-width:100%;height:auto}
+  .note{color:var(--muted);font-size:14px;margin:8px 0 0}
+  ul{padding-left:20px;margin:6px 0} li{margin:4px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Mặt đứng và mặt cắt, phương án 3</h1>
+  <p class="sub">Cốt ±0,00 là mặt sân. Nền nhà +0,45 m, trần +3,85 m, mép mái +4,05 m, mái ngói dốc 30°. Kích thước tính bằng mét.</p>
+
+  <h2>1. Mặt đứng chính (nhìn từ cổng vào)</h2>
+  <div class="card"><svg id="front"></svg>
+    <p class="note">Mái gian trước thấp hơn mái gian ngang khoảng 0,9 m nên nhìn từ ngoài thấy hai lớp mái chồng nhau như ảnh mẫu. Mảng gỗ và cửa sổ bên trái là gian thờ, cửa kính 2 cánh bên phải là sảnh vào.</p>
+  </div>
+
+  <h2>2. Mặt đứng bên hông trái</h2>
+  <div class="card"><svg id="side"></svg>
+    <p class="note">Tường gian ngang bên trái xây sát ranh nên không mở cửa sổ. Gian trước lùi vào 1,8 m nên có cửa sổ tròn cho gian thờ và mảng kính cho phòng khách.</p>
+  </div>
+
+  <h2>3. Mặt cắt A-A (cắt dọc giữa nhà)</h2>
+  <div class="card"><svg id="secA"></svg>
+    <p class="note">Giếng trời nằm trên đảo bếp, mở xuyên trần và mái. Không gian áp mái cao tới 3,7 m nên cần lớp cách nhiệt dưới ngói và lỗ thông gió ở hai đầu hồi.</p>
+  </div>
+
+  <h2>4. Mặt cắt B-B (cắt ngang qua 2 phòng ngủ chính)</h2>
+  <div class="card"><svg id="secB"></svg>
+    <p class="note">Hẻm 0,5 m bên phải nằm dưới mái đua 0,3 m, nước mưa rơi vào máng xối chứ không rơi xuống hẻm. Tường rào ranh cao 1,8 m.</p>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <b>Ghi chú kỹ thuật sơ bộ</b>
+    <ul>
+      <li>Nền nâng +0,45 m so với sân để chống ẩm và ngập, có 3 bậc ở hiên trước và hiên sau.</li>
+      <li>Trần thạch cao cao 3,4 m tính từ sàn. Riêng phòng khách có thể làm trần nghiêng theo mái để cao hơn.</li>
+      <li>Mái ngói phẳng trên hệ vì kèo thép mạ, có tấm cách nhiệt, máng xối âm dọc hẻm và ranh trái.</li>
+      <li>Đây là bản vẽ ý tưởng. Chiều cao và kết cấu phải do kỹ sư tính lại khi làm hồ sơ xin phép.</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+const NS='http://www.w3.org/2000/svg';
+const C=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+function el(t,a,p,txt){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;p.appendChild(e);return e;}
+const FL=0.45, CE=3.85, EA=4.05;
+function frame(id,X0,X1,Hmax,S){
+  const svg=document.getElementById(id), pad=40, w=(X1-X0)*S+pad*2, h=(Hmax+0.8)*S+pad*2;
+  svg.setAttribute('viewBox',`0 0 ${w} ${h}`); svg.setAttribute('width',w); svg.setAttribute('height',h);
+  const g=el('g',{},svg);
+  const m={g,S,x:v=>pad+(v-X0)*S,y:v=>pad+(Hmax-v)*S,X0,X1};
+  el('rect',{x:0,y:0,width:w,height:m.y(0),fill:C('--sky')},g);
+  el('rect',{x:0,y:m.y(0),width:w,height:h-m.y(0),fill:C('--ground'),opacity:.35},g);
+  el('line',{x1:0,y1:m.y(0),x2:w,y2:m.y(0),stroke:C('--ink'),'stroke-width':2},g);
+  return m;
+}
+function R(m,x1,x2,y1,y2,a){return el('rect',Object.assign({x:m.x(x1),y:m.y(y2),width:(x2-x1)*m.S,height:(y2-y1)*m.S},a),m.g);}
+function P(m,pts,a){return el('polygon',Object.assign({points:pts.map(([x,y])=>m.x(x)+','+m.y(y)).join(' ')},a),m.g);}
+function L(m,x1,y1,x2,y2,a){return el('line',Object.assign({x1:m.x(x1),y1:m.y(y1),x2:m.x(x2),y2:m.y(y2)},a),m.g);}
+function T(m,x,y,s,o={}){const t=el('text',{x:m.x(x),y:m.y(y),'text-anchor':o.anchor||'middle','font-size':o.size||11,fill:o.fill||C('--ink'),'font-weight':o.bold?600:400},m.g,s);return t;}
+const wallA=()=>({fill:C('--wall'),stroke:C('--wallline'),'stroke-width':1.2});
+const glassA=()=>({fill:C('--glass'),stroke:'#1f2328','stroke-width':1.5});
+const roofA=()=>({fill:C('--roof'),stroke:'#2b2f36','stroke-width':1.2});
+function fascia(m,x1,x2){R(m,x1,x2,EA-0.25,EA,{fill:'#fff',stroke:C('--wallline'),'stroke-width':1});}
+function levels(m,x,items){items.forEach(([v,s])=>{L(m,x-0.2,v,x+0.2,v,{stroke:C('--muted')});T(m,x+0.3,v-0.07,s,{anchor:'start',size:10,fill:C('--muted')});});}
+function hdim(m,x1,x2,y,s){L(m,x1,y,x2,y,{stroke:C('--muted')});[x1,x2].forEach(x=>L(m,x,y-0.12,x,y+0.12,{stroke:C('--muted')}));T(m,(x1+x2)/2,y+0.12,s,{size:10,fill:C('--muted')});}
+function steps(m,x,dir){for(let i=0;i<3;i++){const x1=x+dir*i*0.3;R(m,Math.min(x1,x1+dir*0.3),Math.max(x1,x1+dir*0.3),0,FL-i*0.15,{fill:'#d9d6cf',stroke:'#9a968e','stroke-width':.8});}}
+const tri=(a,b,h)=>(b-a)/2*Math.tan(Math.PI/6)+h;
+
+// 1. FRONT ELEVATION (axis = width w)
+(function(){
+  const m=frame('front',-1.5,13.5,8.2,62);
+  const rCross=tri(-0.3,11.8,EA), rFront=tri(1.0,10.1,EA);
+  // cross wing behind
+  P(m,[[-0.3,EA],[11.8,EA],[5.75,rCross]],roofA()); fascia(m,-0.3,11.8);
+  R(m,0,11.5,0,EA-0.25,wallA());
+  R(m,0.3,1.5,FL+0.9,FL+2.3,glassA()); R(m,9.6,11.2,FL+0.9,FL+2.3,glassA());
+  // front wing
+  R(m,1.3,9.8,0,FL,{fill:'#d9d6cf',stroke:'#9a968e'});           // porch plinth
+  R(m,1.8,9.3,FL,EA-0.25,wallA());
+  R(m,1.9,5.2,FL,FL+2.7,{fill:C('--wood'),stroke:'#6b4a2b','stroke-width':1});
+  R(m,2.5,4.5,FL+0.9,FL+2.3,glassA());
+  R(m,6.0,8.0,FL,FL+2.6,glassA()); L(m,7,FL,7,FL+2.6,{stroke:'#1f2328','stroke-width':2});
+  R(m,8.3,9.1,FL+0.9,FL+2.3,glassA());
+  [[1.85,2.15],[8.95,9.25]].forEach(([a,b])=>R(m,a,b,FL,EA-0.25,{fill:'#fff',stroke:C('--wallline')}));
+  P(m,[[1.0,EA],[10.1,EA],[5.55,rFront]],roofA()); fascia(m,1.0,10.1);
+  for(let i=0;i<3;i++) R(m,6.0-0.1,8.1,FL-(i+1)*0.15,FL-i*0.15,{fill:'#cfcbc3',stroke:'#9a968e','stroke-width':.8,transform:`translate(0,${i*0})`});
+  T(m,3.5,FL+3.0,'GIAN THỜ',{size:11,bold:true}); T(m,7,FL+3.0,'SẢNH VÀO',{size:11,bold:true});
+  T(m,0.9,FL+2.6,'ngủ 3',{size:10}); T(m,10.4,FL+2.6,'ngủ 4',{size:10});
+  levels(m,12.3,[[0,''],[FL,'+0,45 nền / ±0,00 sân'],[EA,'+4,05 mép mái'],[rFront,'+'+rFront.toFixed(2).replace('.',',')+' đỉnh mái trước'],[rCross,'+'+rCross.toFixed(2).replace('.',',')+' đỉnh mái sau']]);
+  hdim(m,0,11.5,-0.5,'11,5 nhà'); hdim(m,11.5,12,-0.5,'0,5');
+})();
+
+// 2. LEFT SIDE ELEVATION (axis = depth d)
+(function(){
+  const m=frame('side',11,43,8.2,34);
+  const rF=tri(1.0,10.1,EA), rC=tri(-0.3,11.8,EA);
+  // front wing roof (further back from viewer, draw first)
+  P(m,[[12.2,EA],[26.3,EA],[26.3-4.55,rF],[12.2+4.55,rF]],roofA()); fascia(m,12.2,26.3);
+  R(m,13,15.5,0,FL,{fill:'#d9d6cf',stroke:'#9a968e'});
+  R(m,15.5,25.5,FL,EA-0.25,wallA());
+  el('circle',{cx:m.x(17.7),cy:m.y(FL+1.9),r:0.55*m.S,fill:C('--glass'),stroke:'#1f2328','stroke-width':3},m.g);
+  R(m,21.5,24.5,FL+0.6,FL+2.6,glassA());
+  R(m,13.05,13.35,FL,EA-0.25,{fill:'#fff',stroke:C('--wallline')});
+  steps(m,13,-1);
+  // cross wing
+  R(m,25.5,39.3,0,EA-0.25,wallA());
+  R(m,39.3,41.1,0,FL,{fill:'#d9d6cf',stroke:'#9a968e'});
+  R(m,40.9,41.2,FL,EA-0.25,{fill:'#fff',stroke:C('--wallline')});
+  steps(m,41.1,1);
+  P(m,[[24.7,EA],[41.9,EA],[41.9-6.05,rC],[24.7+6.05,rC]],roofA()); fascia(m,24.7,41.9);
+  T(m,17.7,FL+3.0,'gian thờ',{size:10}); T(m,23,FL+3.0,'phòng khách',{size:10}); T(m,32.4,FL+1.6,'tường sát ranh, không mở cửa',{size:10,fill:C('--muted')});
+  hdim(m,13,25.5,-0.5,'gian trước 12,5'); hdim(m,25.5,41.1,-0.5,'gian ngang + hiên sau 15,6');
+  levels(m,42.3,[[FL,'+0,45'],[EA,'+4,05'],[rC,'+'+rC.toFixed(2).replace('.',',')]]);
+})();
+
+// 3. SECTION A-A (longitudinal at w≈5.6)
+(function(){
+  const m=frame('secA',11,43,8.2,34);
+  const rF=tri(1.0,10.1,EA), rC=tri(-0.3,11.8,EA);
+  const roofLine=(pts)=>{P(m,pts,{fill:'#e9e5dc',stroke:'none'}); el('polyline',{points:pts.map(([x,y])=>m.x(x)+','+m.y(y)).join(' '),fill:'none',stroke:C('--roof'),'stroke-width':6},m.g);};
+  roofLine([[12.2,EA],[16.75,rF],[21.75,rF],[26.3,EA]]);
+  roofLine([[24.7,EA],[30.75,rC],[35.85,rC],[41.9,EA]]);
+  R(m,15.5,39.3,FL,CE,{fill:C('--inside')});
+  // ceiling
+  L(m,15.5,CE,26.8,CE,{stroke:'#8a8f96','stroke-width':3}); L(m,30.2,CE,39.3,CE,{stroke:'#8a8f96','stroke-width':3});
+  // skylight shaft + glass on roof
+  R(m,26.8,30.2,CE,tri(-0.3,11.8,EA)-0.2,{fill:'#fff7d6',opacity:.9});
+  const yAt=d=>EA+(d-24.7)*Math.tan(Math.PI/6);
+  L(m,26.8,yAt(26.8),30.2,yAt(30.2),{stroke:'#5aa9e6','stroke-width':6});
+  L(m,26.8,CE,26.8,yAt(26.8),{stroke:'#8a8f96','stroke-width':1.5}); L(m,30.2,CE,30.2,yAt(30.2),{stroke:'#8a8f96','stroke-width':1.5});
+  T(m,28.5,yAt(30.2)+0.35,'GIẾNG TRỜI',{size:10,bold:true});
+  // floor slab
+  R(m,13,41.1,FL-0.15,FL,{fill:C('--cut')}); R(m,13,41.1,0,FL-0.15,{fill:'#cfcbc3'});
+  // cut walls
+  const cw=(d)=>R(m,d-0.1,d+0.1,FL,CE,{fill:C('--cut')});
+  R(m,15.4,15.6,FL+2.6,CE,{fill:C('--cut')}); R(m,15.45,15.55,FL,FL+2.6,{fill:C('--glass')});
+  R(m,39.2,39.4,FL+2.3,CE,{fill:C('--cut')}); R(m,39.25,39.35,FL,FL+2.3,{fill:C('--wood')});
+  [20,25.5,31.5,33.7,36.9].forEach(d=>R(m,d-0.1,d+0.1,FL+2.8,CE,{fill:C('--cut')}));
+  [[13.05,13.35],[40.9,41.2]].forEach(([a,b])=>R(m,a,b,FL,EA-0.25,{fill:'#fff',stroke:C('--wallline')}));
+  // furniture silhouettes
+  R(m,26.1,30.9,FL,FL+0.9,{fill:'#d9c6a5',stroke:'#8b5a2b'});    // đảo bếp
+  L(m,27.2,CE,27.2,CE-0.8,{stroke:'#2b2f36'}); L(m,28.5,CE,28.5,CE-0.8,{stroke:'#2b2f36'}); L(m,29.8,CE,29.8,CE-0.8,{stroke:'#2b2f36'});
+  [[14.2,'HIÊN'],[17.75,'SẢNH VÀO'],[22.75,'PHÒNG KHÁCH'],[28.5,'BẾP + ĐẢO'],[32.6,'SẢNH'],[35.3,'SẢNH SAU'],[38.1,'LỐI RA'],[40.2,'HIÊN SAU']].forEach(([d,s])=>T(m,d,FL+1.5,s,{size:10,bold:true}));
+  T(m,19,rF-1.1,'áp mái',{size:10,fill:C('--muted')}); T(m,34,rC-1.3,'áp mái, cách nhiệt',{size:10,fill:C('--muted')});
+  levels(m,42.3,[[FL,'+0,45 sàn'],[CE,'+3,85 trần'],[rF,'+'+rF.toFixed(2).replace('.',',')],[rC,'+'+rC.toFixed(2).replace('.',',')]]);
+  hdim(m,13,15.5,-0.5,'2,5'); hdim(m,15.5,20,-0.5,'4,5'); hdim(m,20,25.5,-0.5,'5,5'); hdim(m,25.5,31.5,-0.5,'6'); hdim(m,31.5,33.7,-0.5,'2,2'); hdim(m,33.7,36.9,-0.5,'3,2'); hdim(m,36.9,39.3,-0.5,'2,4'); hdim(m,39.3,41.1,-0.5,'1,8');
+})();
+
+// 4. SECTION B-B (transverse at d≈35, through masters)
+(function(){
+  const m=frame('secB',-1.5,13.5,8.2,62);
+  const rC=tri(-0.3,11.8,EA);
+  P(m,[[-0.3,EA],[5.75,rC],[11.8,EA]],{fill:'#e9e5dc'});
+  el('polyline',{points:[[-0.3,EA],[5.75,rC],[11.8,EA]].map(([x,y])=>m.x(x)+','+m.y(y)).join(' '),fill:'none',stroke:C('--roof'),'stroke-width':7},m.g);
+  fascia(m,-0.3,0); fascia(m,11.5,11.8);
+  R(m,0,11.5,FL,CE,{fill:C('--inside')});
+  L(m,0,CE,11.5,CE,{stroke:'#8a8f96','stroke-width':3});
+  R(m,0,11.5,FL-0.15,FL,{fill:C('--cut')}); R(m,-0.2,11.7,0,FL-0.15,{fill:'#cfcbc3'});
+  R(m,-0.1,0.1,FL,CE+0.2,{fill:C('--cut')}); R(m,11.4,11.6,FL,CE+0.2,{fill:C('--cut')});
+  R(m,3.75,3.85,FL,CE,{fill:C('--cut')}); R(m,7.65,7.75,FL,CE,{fill:C('--cut')});
+  // fence on right boundary + gutter
+  R(m,11.95,12.1,0,1.8,{fill:C('--wall'),stroke:C('--wallline')});
+  R(m,11.55,11.85,EA-0.2,EA,{fill:'#8a8f96'}); T(m,12.6,EA-0.1,'máng xối',{size:10,fill:C('--muted'),anchor:'start'});
+  T(m,11.75,0.25,'hẻm 0,5',{size:10,fill:C('--muted')}); T(m,12.6,1.8,'rào ranh 1,8',{size:10,fill:C('--muted'),anchor:'start'});
+  // beds
+  R(m,0.4,2.0,FL,FL+0.5,{fill:'#fff',stroke:'#9bb6d4'}); R(m,9.5,11.1,FL,FL+0.5,{fill:'#fff',stroke:'#9bb6d4'});
+  R(m,3.2,3.75,FL,CE,{fill:'#e5e7eb',stroke:'#b8b3a8'}); R(m,7.75,8.3,FL,CE,{fill:'#e5e7eb',stroke:'#b8b3a8'});
+  T(m,1.9,FL+2.0,'NGỦ CHÍNH 1',{size:11,bold:true}); T(m,5.75,FL+2.0,'SẢNH SAU',{size:11,bold:true}); T(m,9.6,FL+2.0,'NGỦ CHÍNH 2',{size:11,bold:true});
+  T(m,3.5,FL+3.1,'tủ âm',{size:9,fill:C('--muted')}); T(m,8.0,FL+3.1,'tủ âm',{size:9,fill:C('--muted')});
+  T(m,5.75,rC-1.5,'áp mái cao '+(rC-CE).toFixed(1).replace('.',',')+' m',{size:10,fill:C('--muted')});
+  levels(m,-1.2,[]);
+  hdim(m,0,3.8,-0.5,'3,8'); hdim(m,3.8,7.7,-0.5,'3,9'); hdim(m,7.7,11.5,-0.5,'3,8'); hdim(m,11.5,12,-0.5,'0,5');
+  levels(m,13.0,[[FL,'+0,45'],[CE,'+3,85'],[rC,'+'+rC.toFixed(2).replace('.',',')]]);
+})();
+</script>
+</body>
+</html>
