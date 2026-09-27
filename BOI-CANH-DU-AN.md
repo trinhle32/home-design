@@ -22,8 +22,11 @@
 - Sân sau 8,3 m: kho giặt, sân phơi, chòi 5 x 5 + BBQ, WC sân vườn cạnh chòi.
 - Đã kiểm theo phong thủy (bảng trong mat-bang-nha-12x50.html). Chưa có hướng nhà và năm sinh gia chủ.
 
-## Ngân sách đã chốt
-- Gói vật tư tiêu chuẩn: nhà chính ≈ 2,52 tỷ, có dự phòng 10% ≈ 2,77 tỷ. Đất có sẵn, thiết kế đã có. Chưa gồm nội thất, garage, rào, sân, chòi, cây.
+## Ngân sách và kỹ thuật đã chốt
+- Gói vật tư tiêu chuẩn: gạch granite VN 60x120, sơn Dulux/Jotun, cửa nhôm Xingfa kính cường lực, thiết bị WC Inax/American Standard, đèn Panasonic/Philips.
+- Mái giữ nguyên: mái Nhật 4 mái, dốc 30°, đua 0,8 m, kèo thép mạ kẽm, ngói phẳng xám đen.
+- Điện nước đi âm (dây Cadivi, PPR, PVC Bình Minh/Tiền Phong), bồn inox + bơm tăng áp. Làm thêm từ đầu: ống chờ máy lạnh 6 phòng, điện nước âm sàn tới đảo bếp, ống chờ nước nóng 4 WC, LAN + camera âm, ổ cắm ngoài trời, điện nước ngầm tới WC sân và kho giặt (25–40 triệu).
+- Nhà chính ≈ 2,8 tỷ có dự phòng 10%. Đất có sẵn, thiết kế ý tưởng có sẵn. Chưa gồm nội thất (~0,45 tỷ), garage + rào + sân lát (~0,37 tỷ), chòi và cây (làm sau), san lấp nền.
 
 ## File có sẵn trong thư mục này
 - mat-bang-nha-12x50.html / .png: mặt bằng tổng thể, mặt bằng công năng, bảng diện tích, nội thất, dự toán thô.
