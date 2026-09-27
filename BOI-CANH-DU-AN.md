@@ -16,7 +16,7 @@
 - Gian ngang 11 x 13,8 m, hẻm 1 m bên phải thông ra sân sau.
   - Hàng trước: ngủ khách 2,8 x 8,2 chạy suốt 2 hàng, 2 giường đơn, WC trong phòng | phòng ăn 5,4 x 6 ở tâm nhà, giếng trời, 2 bàn 8 chỗ | bếp nấu 2,8 x 4 tựa tường hẻm + đảo buffet 3 m.
   - Hàng giữa: sảnh | ngủ 4 (2,8 x 4,2).
-  - Hàng sau: ngủ chính 1 và 2 (4,9 x 5,6) | hành lang 1,2 m ra hiên sau.
+  - Hàng sau: ngủ chính 1 và 2 (4,5 x 5,6) | hành lang 2 m ra hiên sau.
   - 2 WC riêng 2,4 x 2,6 nhô ra sau dưới mái đua, hiên sau 5,8 m ở giữa.
 - Sân sau 8,3 m: kho giặt, sân phơi, chòi 5 x 5 + BBQ, WC sân vườn cạnh chòi.
 - Đã kiểm theo phong thủy (bảng trong mat-bang-nha-12x50.html). Chưa có hướng nhà và năm sinh gia chủ.

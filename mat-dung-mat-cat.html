@@ -40,7 +40,7 @@
 
   <h2>4. Mặt cắt B-B (cắt ngang qua 2 phòng ngủ chính)</h2>
   <div class="card"><svg id="secB"></svg>
-    <p class="note">Hẻm 1 m bên phải, mái đua 0,3 m có máng xối nên nước mưa không đổ thẳng xuống hẻm. HL là hành lang 1,2 m ra hiên sau. Tường rào ranh cao 1,8 m.</p>
+    <p class="note">Hẻm 1 m bên phải, mái đua 0,3 m có máng xối nên nước mưa không đổ thẳng xuống hẻm. HL là hành lang 2 m ra hiên sau. Tường rào ranh cao 1,8 m.</p>
   </div>
 
   <div class="card" style="margin-top:16px">
@@ -171,19 +171,19 @@ const tri=(a,b,h)=>(b-a)/2*Math.tan(Math.PI/6)+h;
   L(m,0,CE,11.0,CE,{stroke:'#8a8f96','stroke-width':3});
   R(m,0,11.0,FL-0.15,FL,{fill:C('--cut')}); R(m,-0.2,11.2,0,FL-0.15,{fill:'#cfcbc3'});
   R(m,-0.1,0.1,FL,CE+0.2,{fill:C('--cut')}); R(m,10.9,11.1,FL,CE+0.2,{fill:C('--cut')});
-  R(m,4.85,4.95,FL,CE,{fill:C('--cut')}); R(m,6.05,6.15,FL,CE,{fill:C('--cut')});
+  R(m,4.45,4.55,FL,CE,{fill:C('--cut')}); R(m,6.45,6.55,FL,CE,{fill:C('--cut')});
   // fence on right boundary + gutter
   R(m,11.95,12.1,0,1.8,{fill:C('--wall'),stroke:C('--wallline')});
   R(m,11.05,11.35,EA-0.2,EA,{fill:'#8a8f96'}); T(m,12.6,EA-0.1,'máng xối',{size:10,fill:C('--muted'),anchor:'start'});
   T(m,11.5,0.25,'hẻm 1 m',{size:10,fill:C('--muted')}); T(m,12.6,1.8,'rào ranh 1,8',{size:10,fill:C('--muted'),anchor:'start'});
   // beds
   R(m,0.1,2.1,FL,FL+0.5,{fill:'#fff',stroke:'#9bb6d4'}); R(m,8.9,10.9,FL,FL+0.5,{fill:'#fff',stroke:'#9bb6d4'});
-  R(m,4.3,4.85,FL,CE,{fill:'#e5e7eb',stroke:'#b8b3a8'}); R(m,6.15,6.7,FL,CE,{fill:'#e5e7eb',stroke:'#b8b3a8'});
+  R(m,3.9,4.45,FL,CE,{fill:'#e5e7eb',stroke:'#b8b3a8'}); R(m,6.55,7.1,FL,CE,{fill:'#e5e7eb',stroke:'#b8b3a8'});
   T(m,1.9,FL+2.0,'NGỦ CHÍNH 1',{size:11,bold:true}); T(m,5.5,FL+2.4,'HL',{size:10,bold:true}); T(m,9.0,FL+2.0,'NGỦ CHÍNH 2',{size:11,bold:true});
-  T(m,4.55,FL+3.1,'tủ',{size:9,fill:C('--muted')}); T(m,6.45,FL+3.1,'tủ',{size:9,fill:C('--muted')});
+  T(m,4.15,FL+3.1,'tủ',{size:9,fill:C('--muted')}); T(m,6.8,FL+3.1,'tủ',{size:9,fill:C('--muted')});
   T(m,5.5,rC-1.5,'áp mái cao '+(rC-CE).toFixed(1).replace('.',',')+' m',{size:10,fill:C('--muted')});
   levels(m,-1.2,[]);
-  hdim(m,0,4.9,-0.5,'4,9'); hdim(m,4.9,6.1,-0.5,'1,2'); hdim(m,6.1,11.0,-0.5,'4,9'); hdim(m,11.0,12,-0.5,'1');
+  hdim(m,0,4.5,-0.5,'4,5'); hdim(m,4.5,6.5,-0.5,'2'); hdim(m,6.5,11.0,-0.5,'4,5'); hdim(m,11.0,12,-0.5,'1');
   levels(m,13.0,[[FL,'+0,45'],[CE,'+3,85'],[rC,'+'+rC.toFixed(2).replace('.',',')]]);
 })();
 </script>
