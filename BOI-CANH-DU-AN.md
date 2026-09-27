@@ -23,6 +23,7 @@
 - Đã kiểm theo phong thủy (bảng trong mat-bang-nha-12x50.html). Chưa có hướng nhà và năm sinh gia chủ.
 
 ## Ngân sách và kỹ thuật đã chốt
+- Địa điểm: ngoại ô Phan Thiết (Bình Thuận cũ, nay thuộc Lâm Đồng). Giá trọn gói tiêu chuẩn ở đây 5,0–5,3 triệu/m² → nhà chính ≈ 2,45–2,6 tỷ có dự phòng. Khí hậu biển: thép mạ kẽm nhúng nóng, nhôm sơn tĩnh điện, inox 304, ngói bắt vít chống tốc, nên có cách nhiệt mái. Khi làm ảnh AI: bối cảnh nắng gắt miền biển, cây dừa, xương rồng, cát trắng hợp hơn vườn nhiệt đới rậm.
 - Gói vật tư tiêu chuẩn: gạch granite VN 60x120, sơn Dulux/Jotun, cửa nhôm Xingfa kính cường lực, thiết bị WC Inax/American Standard, đèn Panasonic/Philips.
 - Mái giữ nguyên: mái Nhật 4 mái, dốc 30°, đua 0,8 m, kèo thép mạ kẽm, ngói phẳng xám đen.
 - Điện nước đi âm (dây Cadivi, PPR, PVC Bình Minh/Tiền Phong), bồn inox + bơm tăng áp. Làm thêm từ đầu: ống chờ máy lạnh 6 phòng, điện nước âm sàn tới đảo bếp, ống chờ nước nóng 4 WC, LAN + camera âm, ổ cắm ngoài trời, điện nước ngầm tới WC sân và kho giặt (25–40 triệu).
