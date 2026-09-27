@@ -10,24 +10,22 @@
 - Hẻm 0,5 m bên hông ra sân sau.
 - Nội thất hiện đại tối giản, ít cây xanh, chỉ chậu nhỏ.
 
-## Bố cục hiện tại (phương án 3), tính từ đường vào
-| Khu | Sâu | Nội dung |
-|---|---|---|
-| Sân trước | 13 m | Cổng trượt 5 m, cổng bộ, garage 3,5 x 6, hồ cá |
-| Gian trước | 12,5 m, rộng 7,5 m | Hiên 2,5; gian thờ 4,5 x 3,5 (trái) + sảnh vào 4,5 x 4 (phải); phòng khách + sinh hoạt 5,5 x 7,5 |
-| Gian ngang | 13,8 m + hiên sau 1,8 m, rộng 11,5 m | Chừa hẻm 0,5 m bên phải |
-| Sân sau | 8,9 m | Kho giặt, sân phơi, chòi gỗ 5 x 5 + quầy BBQ |
-
-Gian ngang, chia 3 hàng:
-- Hàng trước (sâu 6 m): ngủ 3 (3,2 m) | bếp 5,1 m có đảo 4,8 m + bàn ăn 8 ghế + giếng trời | ngủ 4 (3,2 m).
-- Hàng giữa (sâu 2,2 m): kho | sảnh | WC khách.
-- Hàng sau (sâu 5,6 m): ngủ chính 1 có WC riêng | sảnh sau, WC phụ, lối ra sân sau, kho nhỏ | ngủ chính 2 có WC riêng.
-- Tất cả WC nằm ở nửa sau nhà, cách gian thờ hơn 16 m.
+## Bố cục hiện tại (xem mat-bang-nha-12x50.html là bản chuẩn)
+- Sân trước 13 m: cổng, garage bên trái (nhìn từ trong ra), hồ cá bên trái cạnh lối xe, tiểu cảnh đá bên phải.
+- Gian trước 7,5 x 12,5 m: hiên 2,5; gian thờ 4,5 x 3,5 (phòng đầu tiên) + sảnh vào 4,5 x 4; lam gỗ bình phong; phòng khách 5,5 x 7,5.
+- Gian ngang 11 x 13,8 m, hẻm 1 m bên phải thông ra sân sau.
+  - Hàng trước: ngủ 3 (2,8 m) | phòng ăn 5,4 x 6 ở tâm nhà, giếng trời, 2 bàn 8 chỗ | bếp nấu 2,8 x 4 tựa tường hẻm + đảo buffet 3 m.
+  - Hàng giữa: WC khách | sảnh | ngủ 4 (2,8 x 4,2).
+  - Hàng sau: ngủ chính 1 và 2 (4,9 x 5,6) | hành lang 1,2 m ra hiên sau.
+  - 2 WC riêng 2,4 x 2,6 nhô ra sau dưới mái đua, hiên sau 5,8 m ở giữa.
+- Sân sau 8,3 m: kho giặt, sân phơi, chòi 5 x 5 + BBQ, WC sân vườn cạnh chòi.
+- Đã kiểm theo phong thủy (bảng trong mat-bang-nha-12x50.html). Chưa có hướng nhà và năm sinh gia chủ.
 
 ## File có sẵn trong thư mục này
 - mat-bang-nha-12x50.html / .png: mặt bằng tổng thể, mặt bằng công năng, bảng diện tích, nội thất, dự toán thô.
 - 3d-nha-12x50.html: mô hình khối Three.js, mở bằng trình duyệt. Tham số ?view=front|back|top|side và &roof=0 để ẩn mái.
-- 3d-*.png: ảnh chụp mô hình 3D (bản cũ, cần render lại theo phương án 3).
+- 3d-*.png: ảnh chụp mô hình 3D theo bố cục mới nhất.
+- mat-dung-mat-cat.html / .png: mặt đứng chính, mặt đứng hông, 2 mặt cắt.
 - anh-mau-tiktok.png: ảnh mẫu chủ nhà gửi, dùng làm tham chiếu phong cách.
 
 ## VIỆC CẦN LÀM TRÊN MAC MINI M4 16 GB (làm theo đúng thứ tự)
@@ -68,7 +66,7 @@ mflux-generate --model schnell --quantize 4 --steps 4 \
 ```
 Nếu tên cờ khác, xem `mflux-generate --help` (các bản mflux có thể đổi tên cờ img2img).
 image-strength thấp (0,3) thì giữ hình khối nhiều hơn, cao (0,6) thì ảnh đẹp hơn nhưng lệch khối hơn.
-Lưu ý: các ảnh 3d-*.png hiện là BỐ CỤC CŨ. Chỉ dùng chúng cho phối cảnh ngoại thất tổng thể, vì hình khối bên ngoài gần giống.
+Các ảnh 3d-*.png đã theo bố cục mới nhất.
 
 ### Bước 4: Gom kết quả
 Tạo file so-sanh.html hiển thị lưới tất cả ảnh trong ra-anh/ kèm seed và prompt, để chủ nhà chọn.

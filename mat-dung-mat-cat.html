@@ -25,7 +25,7 @@
 
   <h2>1. Mặt đứng chính (nhìn từ cổng vào)</h2>
   <div class="card"><svg id="front"></svg>
-    <p class="note">Mái gian trước thấp hơn mái gian ngang khoảng 0,9 m nên nhìn từ ngoài thấy hai lớp mái chồng nhau như ảnh mẫu. Mảng gỗ và cửa sổ bên trái là gian thờ, cửa kính 2 cánh bên phải là sảnh vào.</p>
+    <p class="note">Mái gian trước thấp hơn mái gian ngang khoảng 0,9 m nên nhìn từ ngoài thấy hai lớp mái chồng nhau như ảnh mẫu. Mảng gỗ và ô lam gỗ bên trái là gian thờ, bàn thờ không nhìn thẳng ra cửa kính, cửa kính 2 cánh bên phải là sảnh vào.</p>
   </div>
 
   <h2>2. Mặt đứng bên hông trái</h2>
@@ -40,7 +40,7 @@
 
   <h2>4. Mặt cắt B-B (cắt ngang qua 2 phòng ngủ chính)</h2>
   <div class="card"><svg id="secB"></svg>
-    <p class="note">Hẻm 0,5 m bên phải nằm dưới mái đua 0,3 m, nước mưa rơi vào máng xối chứ không rơi xuống hẻm. Tường rào ranh cao 1,8 m.</p>
+    <p class="note">Hẻm 1 m bên phải, mái đua 0,3 m có máng xối nên nước mưa không đổ thẳng xuống hẻm. HL là hành lang 1,2 m ra hiên sau. Tường rào ranh cao 1,8 m.</p>
   </div>
 
   <div class="card" style="margin-top:16px">
@@ -85,31 +85,31 @@ const tri=(a,b,h)=>(b-a)/2*Math.tan(Math.PI/6)+h;
 // 1. FRONT ELEVATION (axis = width w)
 (function(){
   const m=frame('front',-1.5,13.5,8.2,62);
-  const rCross=tri(-0.3,11.8,EA), rFront=tri(1.0,10.1,EA);
+  const rCross=tri(-0.3,11.3,EA), rFront=tri(1.0,10.1,EA);
   // cross wing behind
-  P(m,[[-0.3,EA],[11.8,EA],[5.75,rCross]],roofA()); fascia(m,-0.3,11.8);
-  R(m,0,11.5,0,EA-0.25,wallA());
-  R(m,0.3,1.5,FL+0.9,FL+2.3,glassA()); R(m,9.6,11.2,FL+0.9,FL+2.3,glassA());
+  P(m,[[-0.3,EA],[11.3,EA],[5.5,rCross]],roofA()); fascia(m,-0.3,11.3);
+  R(m,0,11.0,0,EA-0.25,wallA());
+  R(m,0.3,1.5,FL+0.9,FL+2.3,glassA()); R(m,9.5,10.8,FL+0.9,FL+2.3,glassA());
   // front wing
   R(m,1.3,9.8,0,FL,{fill:'#d9d6cf',stroke:'#9a968e'});           // porch plinth
   R(m,1.8,9.3,FL,EA-0.25,wallA());
   R(m,1.9,5.2,FL,FL+2.7,{fill:C('--wood'),stroke:'#6b4a2b','stroke-width':1});
-  R(m,2.5,4.5,FL+0.9,FL+2.3,glassA());
+  for(let w=2.55;w<4.5;w+=0.25) R(m,w,w+0.1,FL+0.9,FL+2.3,{fill:'#7a4a22'});
   R(m,6.0,8.0,FL,FL+2.6,glassA()); L(m,7,FL,7,FL+2.6,{stroke:'#1f2328','stroke-width':2});
   R(m,8.3,9.1,FL+0.9,FL+2.3,glassA());
   [[1.85,2.15],[8.95,9.25]].forEach(([a,b])=>R(m,a,b,FL,EA-0.25,{fill:'#fff',stroke:C('--wallline')}));
   P(m,[[1.0,EA],[10.1,EA],[5.55,rFront]],roofA()); fascia(m,1.0,10.1);
   for(let i=0;i<3;i++) R(m,6.0-0.1,8.1,FL-(i+1)*0.15,FL-i*0.15,{fill:'#cfcbc3',stroke:'#9a968e','stroke-width':.8,transform:`translate(0,${i*0})`});
   T(m,3.5,FL+3.0,'GIAN THỜ',{size:11,bold:true}); T(m,7,FL+3.0,'SẢNH VÀO',{size:11,bold:true});
-  T(m,0.9,FL+2.6,'ngủ 3',{size:10}); T(m,10.4,FL+2.6,'ngủ 4',{size:10});
+  T(m,0.9,FL+2.6,'ngủ 3',{size:10}); T(m,10.15,FL+2.6,'bếp nấu',{size:10});
   levels(m,12.3,[[0,''],[FL,'+0,45 nền / ±0,00 sân'],[EA,'+4,05 mép mái'],[rFront,'+'+rFront.toFixed(2).replace('.',',')+' đỉnh mái trước'],[rCross,'+'+rCross.toFixed(2).replace('.',',')+' đỉnh mái sau']]);
-  hdim(m,0,11.5,-0.5,'11,5 nhà'); hdim(m,11.5,12,-0.5,'0,5');
+  hdim(m,0,11.0,-0.5,'11 nhà'); hdim(m,11.0,12,-0.5,'1 hẻm');
 })();
 
 // 2. LEFT SIDE ELEVATION (axis = depth d)
 (function(){
   const m=frame('side',11,43,8.2,34);
-  const rF=tri(1.0,10.1,EA), rC=tri(-0.3,11.8,EA);
+  const rF=tri(1.0,10.1,EA), rC=tri(-0.3,11.3,EA);
   // front wing roof (further back from viewer, draw first)
   P(m,[[12.2,EA],[26.3,EA],[26.3-4.55,rF],[12.2+4.55,rF]],roofA()); fascia(m,12.2,26.3);
   R(m,13,15.5,0,FL,{fill:'#d9d6cf',stroke:'#9a968e'});
@@ -119,28 +119,26 @@ const tri=(a,b,h)=>(b-a)/2*Math.tan(Math.PI/6)+h;
   R(m,13.05,13.35,FL,EA-0.25,{fill:'#fff',stroke:C('--wallline')});
   steps(m,13,-1);
   // cross wing
-  R(m,25.5,39.3,0,EA-0.25,wallA());
-  R(m,39.3,41.1,0,FL,{fill:'#d9d6cf',stroke:'#9a968e'});
-  R(m,40.9,41.2,FL,EA-0.25,{fill:'#fff',stroke:C('--wallline')});
-  steps(m,41.1,1);
-  P(m,[[24.7,EA],[41.9,EA],[41.9-6.05,rC],[24.7+6.05,rC]],roofA()); fascia(m,24.7,41.9);
-  T(m,17.7,FL+3.0,'gian thờ',{size:10}); T(m,23,FL+3.0,'phòng khách',{size:10}); T(m,32.4,FL+1.6,'tường sát ranh, không mở cửa',{size:10,fill:C('--muted')});
-  hdim(m,13,25.5,-0.5,'gian trước 12,5'); hdim(m,25.5,41.1,-0.5,'gian ngang + hiên sau 15,6');
+  R(m,25.5,41.7,0,EA-0.25,wallA());
+  R(m,40.0,40.9,FL+1.6,FL+2.3,glassA());
+  P(m,[[24.7,EA],[41.9,EA],[41.9-5.8,rC],[24.7+5.8,rC]],roofA()); fascia(m,24.7,41.9);
+  T(m,17.7,FL+3.0,'gian thờ',{size:10}); T(m,23,FL+3.0,'phòng khách',{size:10}); T(m,40.5,FL+2.9,'WC riêng 1',{size:10}); T(m,32.4,FL+1.6,'tường sát ranh, không mở cửa',{size:10,fill:C('--muted')});
+  hdim(m,13,25.5,-0.5,'gian trước 12,5'); hdim(m,25.5,41.7,-0.5,'gian ngang + WC riêng 16,2');
   levels(m,42.3,[[FL,'+0,45'],[EA,'+4,05'],[rC,'+'+rC.toFixed(2).replace('.',',')]]);
 })();
 
 // 3. SECTION A-A (longitudinal at w≈5.6)
 (function(){
   const m=frame('secA',11,43,8.2,34);
-  const rF=tri(1.0,10.1,EA), rC=tri(-0.3,11.8,EA);
+  const rF=tri(1.0,10.1,EA), rC=tri(-0.3,11.3,EA);
   const roofLine=(pts)=>{P(m,pts,{fill:'#e9e5dc',stroke:'none'}); el('polyline',{points:pts.map(([x,y])=>m.x(x)+','+m.y(y)).join(' '),fill:'none',stroke:C('--roof'),'stroke-width':6},m.g);};
   roofLine([[12.2,EA],[16.75,rF],[21.75,rF],[26.3,EA]]);
-  roofLine([[24.7,EA],[30.75,rC],[35.85,rC],[41.9,EA]]);
+  roofLine([[24.7,EA],[30.5,rC],[36.1,rC],[41.9,EA]]);
   R(m,15.5,39.3,FL,CE,{fill:C('--inside')});
   // ceiling
   L(m,15.5,CE,26.8,CE,{stroke:'#8a8f96','stroke-width':3}); L(m,30.2,CE,39.3,CE,{stroke:'#8a8f96','stroke-width':3});
   // skylight shaft + glass on roof
-  R(m,26.8,30.2,CE,tri(-0.3,11.8,EA)-0.2,{fill:'#fff7d6',opacity:.9});
+  R(m,26.8,30.2,CE,tri(-0.3,11.3,EA)-0.2,{fill:'#fff7d6',opacity:.9});
   const yAt=d=>EA+(d-24.7)*Math.tan(Math.PI/6);
   L(m,26.8,yAt(26.8),30.2,yAt(30.2),{stroke:'#5aa9e6','stroke-width':6});
   L(m,26.8,CE,26.8,yAt(26.8),{stroke:'#8a8f96','stroke-width':1.5}); L(m,30.2,CE,30.2,yAt(30.2),{stroke:'#8a8f96','stroke-width':1.5});
@@ -151,41 +149,41 @@ const tri=(a,b,h)=>(b-a)/2*Math.tan(Math.PI/6)+h;
   const cw=(d)=>R(m,d-0.1,d+0.1,FL,CE,{fill:C('--cut')});
   R(m,15.4,15.6,FL+2.6,CE,{fill:C('--cut')}); R(m,15.45,15.55,FL,FL+2.6,{fill:C('--glass')});
   R(m,39.2,39.4,FL+2.3,CE,{fill:C('--cut')}); R(m,39.25,39.35,FL,FL+2.3,{fill:C('--wood')});
-  [20,25.5,31.5,33.7,36.9].forEach(d=>R(m,d-0.1,d+0.1,FL+2.8,CE,{fill:C('--cut')}));
+  [20,25.5,31.5,33.7].forEach(d=>R(m,d-0.1,d+0.1,FL+2.8,CE,{fill:C('--cut')}));
   [[13.05,13.35],[40.9,41.2]].forEach(([a,b])=>R(m,a,b,FL,EA-0.25,{fill:'#fff',stroke:C('--wallline')}));
   // furniture silhouettes
-  R(m,26.1,30.9,FL,FL+0.9,{fill:'#d9c6a5',stroke:'#8b5a2b'});    // đảo bếp
+  R(m,26.75,27.65,FL+0.7,FL+0.78,{fill:'#a67c52'}); R(m,29.35,30.25,FL+0.7,FL+0.78,{fill:'#a67c52'});  // 2 bàn ăn
   L(m,27.2,CE,27.2,CE-0.8,{stroke:'#2b2f36'}); L(m,28.5,CE,28.5,CE-0.8,{stroke:'#2b2f36'}); L(m,29.8,CE,29.8,CE-0.8,{stroke:'#2b2f36'});
-  [[14.2,'HIÊN'],[17.75,'SẢNH VÀO'],[22.75,'PHÒNG KHÁCH'],[28.5,'BẾP + ĐẢO'],[32.6,'SẢNH'],[35.3,'SẢNH SAU'],[38.1,'LỐI RA'],[40.2,'HIÊN SAU']].forEach(([d,s])=>T(m,d,FL+1.5,s,{size:10,bold:true}));
+  [[14.2,'HIÊN'],[17.75,'SẢNH VÀO'],[22.75,'PHÒNG KHÁCH'],[28.5,'PHÒNG ĂN'],[32.6,'SẢNH'],[36.5,'HÀNH LANG'],[40.2,'HIÊN SAU']].forEach(([d,s])=>T(m,d,FL+1.5,s,{size:10,bold:true}));
   T(m,19,rF-1.1,'áp mái',{size:10,fill:C('--muted')}); T(m,34,rC-1.3,'áp mái, cách nhiệt',{size:10,fill:C('--muted')});
   levels(m,42.3,[[FL,'+0,45 sàn'],[CE,'+3,85 trần'],[rF,'+'+rF.toFixed(2).replace('.',',')],[rC,'+'+rC.toFixed(2).replace('.',',')]]);
-  hdim(m,13,15.5,-0.5,'2,5'); hdim(m,15.5,20,-0.5,'4,5'); hdim(m,20,25.5,-0.5,'5,5'); hdim(m,25.5,31.5,-0.5,'6'); hdim(m,31.5,33.7,-0.5,'2,2'); hdim(m,33.7,36.9,-0.5,'3,2'); hdim(m,36.9,39.3,-0.5,'2,4'); hdim(m,39.3,41.1,-0.5,'1,8');
+  hdim(m,13,15.5,-0.5,'2,5'); hdim(m,15.5,20,-0.5,'4,5'); hdim(m,20,25.5,-0.5,'5,5'); hdim(m,25.5,31.5,-0.5,'6'); hdim(m,31.5,33.7,-0.5,'2,2'); hdim(m,33.7,39.3,-0.5,'5,6'); hdim(m,39.3,41.1,-0.5,'1,8');
 })();
 
 // 4. SECTION B-B (transverse at d≈35, through masters)
 (function(){
   const m=frame('secB',-1.5,13.5,8.2,62);
-  const rC=tri(-0.3,11.8,EA);
-  P(m,[[-0.3,EA],[5.75,rC],[11.8,EA]],{fill:'#e9e5dc'});
-  el('polyline',{points:[[-0.3,EA],[5.75,rC],[11.8,EA]].map(([x,y])=>m.x(x)+','+m.y(y)).join(' '),fill:'none',stroke:C('--roof'),'stroke-width':7},m.g);
-  fascia(m,-0.3,0); fascia(m,11.5,11.8);
-  R(m,0,11.5,FL,CE,{fill:C('--inside')});
-  L(m,0,CE,11.5,CE,{stroke:'#8a8f96','stroke-width':3});
-  R(m,0,11.5,FL-0.15,FL,{fill:C('--cut')}); R(m,-0.2,11.7,0,FL-0.15,{fill:'#cfcbc3'});
-  R(m,-0.1,0.1,FL,CE+0.2,{fill:C('--cut')}); R(m,11.4,11.6,FL,CE+0.2,{fill:C('--cut')});
-  R(m,3.75,3.85,FL,CE,{fill:C('--cut')}); R(m,7.65,7.75,FL,CE,{fill:C('--cut')});
+  const rC=tri(-0.3,11.3,EA);
+  P(m,[[-0.3,EA],[5.5,rC],[11.3,EA]],{fill:'#e9e5dc'});
+  el('polyline',{points:[[-0.3,EA],[5.5,rC],[11.3,EA]].map(([x,y])=>m.x(x)+','+m.y(y)).join(' '),fill:'none',stroke:C('--roof'),'stroke-width':7},m.g);
+  fascia(m,-0.3,0); fascia(m,11.0,11.3);
+  R(m,0,11.0,FL,CE,{fill:C('--inside')});
+  L(m,0,CE,11.0,CE,{stroke:'#8a8f96','stroke-width':3});
+  R(m,0,11.0,FL-0.15,FL,{fill:C('--cut')}); R(m,-0.2,11.2,0,FL-0.15,{fill:'#cfcbc3'});
+  R(m,-0.1,0.1,FL,CE+0.2,{fill:C('--cut')}); R(m,10.9,11.1,FL,CE+0.2,{fill:C('--cut')});
+  R(m,4.85,4.95,FL,CE,{fill:C('--cut')}); R(m,6.05,6.15,FL,CE,{fill:C('--cut')});
   // fence on right boundary + gutter
   R(m,11.95,12.1,0,1.8,{fill:C('--wall'),stroke:C('--wallline')});
-  R(m,11.55,11.85,EA-0.2,EA,{fill:'#8a8f96'}); T(m,12.6,EA-0.1,'máng xối',{size:10,fill:C('--muted'),anchor:'start'});
-  T(m,11.75,0.25,'hẻm 0,5',{size:10,fill:C('--muted')}); T(m,12.6,1.8,'rào ranh 1,8',{size:10,fill:C('--muted'),anchor:'start'});
+  R(m,11.05,11.35,EA-0.2,EA,{fill:'#8a8f96'}); T(m,12.6,EA-0.1,'máng xối',{size:10,fill:C('--muted'),anchor:'start'});
+  T(m,11.5,0.25,'hẻm 1 m',{size:10,fill:C('--muted')}); T(m,12.6,1.8,'rào ranh 1,8',{size:10,fill:C('--muted'),anchor:'start'});
   // beds
-  R(m,0.4,2.0,FL,FL+0.5,{fill:'#fff',stroke:'#9bb6d4'}); R(m,9.5,11.1,FL,FL+0.5,{fill:'#fff',stroke:'#9bb6d4'});
-  R(m,3.2,3.75,FL,CE,{fill:'#e5e7eb',stroke:'#b8b3a8'}); R(m,7.75,8.3,FL,CE,{fill:'#e5e7eb',stroke:'#b8b3a8'});
-  T(m,1.9,FL+2.0,'NGỦ CHÍNH 1',{size:11,bold:true}); T(m,5.75,FL+2.0,'SẢNH SAU',{size:11,bold:true}); T(m,9.6,FL+2.0,'NGỦ CHÍNH 2',{size:11,bold:true});
-  T(m,3.5,FL+3.1,'tủ âm',{size:9,fill:C('--muted')}); T(m,8.0,FL+3.1,'tủ âm',{size:9,fill:C('--muted')});
-  T(m,5.75,rC-1.5,'áp mái cao '+(rC-CE).toFixed(1).replace('.',',')+' m',{size:10,fill:C('--muted')});
+  R(m,0.1,2.1,FL,FL+0.5,{fill:'#fff',stroke:'#9bb6d4'}); R(m,8.9,10.9,FL,FL+0.5,{fill:'#fff',stroke:'#9bb6d4'});
+  R(m,4.3,4.85,FL,CE,{fill:'#e5e7eb',stroke:'#b8b3a8'}); R(m,6.15,6.7,FL,CE,{fill:'#e5e7eb',stroke:'#b8b3a8'});
+  T(m,1.9,FL+2.0,'NGỦ CHÍNH 1',{size:11,bold:true}); T(m,5.5,FL+2.4,'HL',{size:10,bold:true}); T(m,9.0,FL+2.0,'NGỦ CHÍNH 2',{size:11,bold:true});
+  T(m,4.55,FL+3.1,'tủ',{size:9,fill:C('--muted')}); T(m,6.45,FL+3.1,'tủ',{size:9,fill:C('--muted')});
+  T(m,5.5,rC-1.5,'áp mái cao '+(rC-CE).toFixed(1).replace('.',',')+' m',{size:10,fill:C('--muted')});
   levels(m,-1.2,[]);
-  hdim(m,0,3.8,-0.5,'3,8'); hdim(m,3.8,7.7,-0.5,'3,9'); hdim(m,7.7,11.5,-0.5,'3,8'); hdim(m,11.5,12,-0.5,'0,5');
+  hdim(m,0,4.9,-0.5,'4,9'); hdim(m,4.9,6.1,-0.5,'1,2'); hdim(m,6.1,11.0,-0.5,'4,9'); hdim(m,11.0,12,-0.5,'1');
   levels(m,13.0,[[FL,'+0,45'],[CE,'+3,85'],[rC,'+'+rC.toFixed(2).replace('.',',')]]);
 })();
 </script>
