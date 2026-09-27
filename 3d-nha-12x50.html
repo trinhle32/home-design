@@ -184,8 +184,8 @@ box(39.3-T,39.3,2.6,8.4,0,H,M.wall,house);
 box(39.3,41.7,2.6-T,2.6,0,H,M.wall,house); box(41.7-T,41.7,0,2.6,0,H,M.wall,house); box(39.3,41.7,8.4,8.4+T,0,H,M.wall,house); box(41.7-T,41.7,8.4,11.0,0,H,M.wall,house);
 function win(d,w1,w2,y0=0.9,y1=2.4){box(d-0.03,d+0.03,w1,w2,y0,y1,M.glass,house,false);box(d-0.04,d+0.04,w1,w1+0.05,y0,y1,M.black,house,false);box(d-0.04,d+0.04,w2-0.05,w2,y0,y1,M.black,house,false);}
 function winZ(w,d1,d2,y0=2.0,y1=2.7){box(d1,d2,w-0.03,w+0.03,y0,y1,M.glass,house,false);}
-win(25.5,0.15,0.85,1.9+0.15,2.6+0.15); win(25.5,9.5,10.8);
-winZ(11.0,27,29); winZ(11.0,32,33.2); winZ(11.0,37.4,38.8); winZ(11.0,40,41.2);            // cửa sổ cao ra hẻm
+win(25.5,0.15,0.85,1.9+0.15,2.6+0.15); win(25.5,10.3,10.9); box(25.5-0.02,25.5+T+0.02,9.3,10.1,0,2.3,M.wood,house,false);   // cửa phụ bếp ra garage
+winZ(11.0,25.8,26.9); winZ(11.0,32,33.2); winZ(11.0,37.4,38.8); winZ(11.0,40,41.2);            // cửa sổ cao ra hẻm
 win(41.7,0.5,2.1,1.6,2.5); win(41.7,8.9,10.5,1.6,2.5); win(39.3,2.9,4.3,0.2,2.5); win(39.3,6.7,8.1,0.2,2.5);
 box(39.3-0.02,39.3+0.02,4.7,6.3,0,2.3,M.wood,house,false);
 

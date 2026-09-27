@@ -15,7 +15,7 @@
 - Garage 6,7 x 4,9 m có mái thép nối mái nhà, sát hông phải gian trước; cửa phụ từ garage vào phòng khách.
 - Gian trước 6 x 12,5 m, cách ranh trái 1 m, sân bên phải 5 m: hiên 2,5; gian thờ 4,5 x 3,5 (phòng đầu tiên) + sảnh vào 4,5 x 2,5; lam gỗ bình phong; phòng khách 5,5 x 6.
 - Gian ngang 11 x 13,8 m, hẻm 1 m bên phải thông ra sân sau.
-  - Hàng trước: ngủ khách 6 x 2,8, 2 giường đôi kê ngang, đầu tựa tường ranh, cửa mở từ phòng khách | phòng ăn 5,4 x 6 ở tâm nhà, giếng trời, 2 bàn 8 chỗ | bếp nấu 2,8 x 4,2 tựa tường hẻm + đảo buffet 3 m.
+  - Hàng trước: ngủ khách 6 x 2,8, 2 giường đôi kê ngang, đầu tựa tường ranh, cửa mở từ phòng khách | phòng ăn 5,4 x 6 ở tâm nhà, giếng trời, 2 bàn 8 chỗ | bếp nấu 2,8 x 4,2 tựa tường hẻm, chậu inox 2 hố lệch 1,16 m (hố lớn 76 x 45 sâu 25), cửa phụ ra garage, đảo buffet 3 m.
   - Hàng giữa: WC khách (cửa ra sảnh) | sảnh | phòng làm việc 2,8 x 4,1 có 1 giường đơn.
   - Hàng sau: ngủ chính 1 và 2 (5,5 x 4,5) | hành lang 2 m ra hiên sau.
   - 2 WC riêng 2,4 x 2,6 nhô ra sau dưới mái đua, hiên sau 5,8 m ở giữa.
