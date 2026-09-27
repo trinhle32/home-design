@@ -37,6 +37,14 @@
 - mat-dung-mat-cat.html / .png: mặt đứng chính, mặt đứng hông, 2 mặt cắt.
 - anh-mau-tiktok.png: ảnh mẫu chủ nhà gửi, dùng làm tham chiếu phong cách.
 
+## CẬP NHẬT MỚI NHẤT (đọc trước)
+Bố cục đã đổi nhiều so với lần sinh ảnh trước. Hãy SINH LẠI toàn bộ ảnh AI:
+- Dùng 4 ảnh 3d-*.png mới (đã render theo bố cục mới nhất) làm ảnh gốc img2img.
+- Mặt tiền: gian trước chỉ rộng 6 m, lệch trái; bên phải là garage mái thép đen nối liền mái nhà, xe đậu sát hông nhà. Không còn garage đứng riêng ở sân trước.
+- Hồ cá nhỏ nằm cạnh lối đi bộ, bên trái cửa chính khi nhìn từ trong ra.
+- Bối cảnh: ngoại ô Phan Thiết, nắng gắt miền biển, trời xanh, ít mây. Cây: dừa, bàng Singapore, sứ, cỏ lá gừng, sỏi trắng. Tránh vườn nhiệt đới rậm rạp.
+- Viết prompt thêm: "coastal Vietnam, Phan Thiet, bright harsh sunlight, coconut palms, frangipani, white gravel".
+
 ## VIỆC CẦN LÀM TRÊN MAC MINI M4 16 GB (làm theo đúng thứ tự)
 
 Mục tiêu: tạo ảnh phối cảnh AI trông như ảnh chụp thật, giống anh-mau-tiktok.png.
