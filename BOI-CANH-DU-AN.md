@@ -11,12 +11,13 @@
 - Nội thất hiện đại tối giản, ít cây xanh, chỉ chậu nhỏ.
 
 ## Bố cục hiện tại (xem mat-bang-nha-12x50.html là bản chuẩn)
-- Sân trước 13 m: cổng, garage bên trái (nhìn từ trong ra), hồ cá bên trái cạnh lối xe, tiểu cảnh đá bên phải.
-- Gian trước 7,5 x 12,5 m: hiên 2,5; gian thờ 4,5 x 3,5 (phòng đầu tiên) + sảnh vào 4,5 x 4; lam gỗ bình phong; phòng khách 5,5 x 7,5.
+- Sân trước 13 m: cổng bộ và cổng trượt, hồ cá cạnh lối đi bên trái cửa chính (nhìn từ trong ra), tiểu cảnh đá bên phải.
+- Garage 6,7 x 4,9 m có mái thép nối mái nhà, sát hông phải gian trước; cửa phụ từ garage vào phòng khách.
+- Gian trước 6 x 12,5 m, cách ranh trái 1 m, sân bên phải 5 m: hiên 2,5; gian thờ 4,5 x 3,5 (phòng đầu tiên) + sảnh vào 4,5 x 2,5; lam gỗ bình phong; phòng khách 5,5 x 6.
 - Gian ngang 11 x 13,8 m, hẻm 1 m bên phải thông ra sân sau.
-  - Hàng trước: ngủ khách 6 x 2,8, 2 giường đôi kê ngang, đầu tựa tường ranh, cửa mở từ phòng ăn | phòng ăn 5,4 x 6 ở tâm nhà, giếng trời, 2 bàn 8 chỗ | bếp nấu 2,8 x 4,2 tựa tường hẻm + đảo buffet 3 m.
-  - Hàng giữa: WC khách (cửa ra sảnh) | sảnh | phòng làm việc 2,8 x 4 có 1 giường đơn.
-  - Hàng sau: ngủ chính 1 và 2 (4,5 x 5,6) | hành lang 2 m ra hiên sau.
+  - Hàng trước: ngủ khách 6 x 2,8, 2 giường đôi kê ngang, đầu tựa tường ranh, cửa mở từ phòng khách | phòng ăn 5,4 x 6 ở tâm nhà, giếng trời, 2 bàn 8 chỗ | bếp nấu 2,8 x 4,2 tựa tường hẻm + đảo buffet 3 m.
+  - Hàng giữa: WC khách (cửa ra sảnh) | sảnh | phòng làm việc 2,8 x 4,1 có 1 giường đơn.
+  - Hàng sau: ngủ chính 1 và 2 (5,5 x 4,5) | hành lang 2 m ra hiên sau.
   - 2 WC riêng 2,4 x 2,6 nhô ra sau dưới mái đua, hiên sau 5,8 m ở giữa.
 - Sân sau 8,3 m: kho giặt, sân phơi, chòi 5 x 5 + BBQ, WC sân vườn cạnh chòi.
 - Đã kiểm theo phong thủy (bảng trong mat-bang-nha-12x50.html). Chưa có hướng nhà và năm sinh gia chủ.
