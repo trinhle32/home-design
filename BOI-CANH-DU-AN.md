@@ -35,6 +35,8 @@
 - 3d-nha-12x50.html: mô hình khối Three.js, mở bằng trình duyệt. Tham số ?view=front|back|top|side và &roof=0 để ẩn mái.
 - 3d-*.png: ảnh chụp mô hình 3D theo bố cục mới nhất.
 - mat-dung-mat-cat.html / .png: mặt đứng chính, mặt đứng hông, 2 mặt cắt.
+- HO-SO-MOI-BAO-GIA.md: hồ sơ gửi nhà thầu xin báo giá.
+- NHA-THAU-PHAN-THIET.md: danh sách nhà thầu Phan Thiết đã kiểm tra mã số thuế.
 - anh-mau-tiktok.png: ảnh mẫu chủ nhà gửi, dùng làm tham chiếu phong cách.
 
 ## CẬP NHẬT MỚI NHẤT (đọc trước)
