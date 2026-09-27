@@ -183,7 +183,7 @@ box(39.3-T,39.3,2.6,8.4,0,H,M.wall,house);
 box(39.3,41.7,2.6-T,2.6,0,H,M.wall,house); box(41.7-T,41.7,0,2.6,0,H,M.wall,house); box(39.3,41.7,8.4,8.4+T,0,H,M.wall,house); box(41.7-T,41.7,8.4,11.0,0,H,M.wall,house);
 function win(d,w1,w2,y0=0.9,y1=2.4){box(d-0.03,d+0.03,w1,w2,y0,y1,M.glass,house,false);box(d-0.04,d+0.04,w1,w1+0.05,y0,y1,M.black,house,false);box(d-0.04,d+0.04,w2-0.05,w2,y0,y1,M.black,house,false);}
 function winZ(w,d1,d2,y0=2.0,y1=2.7){box(d1,d2,w-0.03,w+0.03,y0,y1,M.glass,house,false);}
-win(25.5,0.3,1.5); win(25.5,9.5,10.8);
+win(25.5,0.3,1.5,1.9+0.15,2.6+0.15); win(25.5,9.5,10.8);
 winZ(11.0,27,29); winZ(11.0,32,33.2); winZ(11.0,37.4,38.8); winZ(11.0,40,41.2);            // cửa sổ cao ra hẻm
 win(41.7,0.5,2.1,1.6,2.5); win(41.7,8.9,10.5,1.6,2.5); win(39.3,2.9,4.6,0.2,2.5); win(39.3,6.4,8.1,0.2,2.5);
 box(39.3-0.02,39.3+0.02,5.05,5.95,0,2.3,M.wood,house,false);
@@ -193,9 +193,9 @@ const inner=new THREE.Group(); house.add(inner); const IH=3.2, TI=0.12;
 function iw(d1,w1,d2,w2){ if(d1===d2) box(d1-TI/2,d1+TI/2,Math.min(w1,w2),Math.max(w1,w2),0,IH,M.inner,inner); else box(Math.min(d1,d2),Math.max(d1,d2),w1-TI/2,w1+TI/2,0,IH,M.inner,inner); }
 iw(15.5,5.3,17,5.3); iw(18.2,5.3,20,5.3); iw(20,1.8,20,5.3);
 iw(25.5,1.8,25.5,3.0); iw(25.5,8.0,25.5,9.3);
-iw(25.5,2.8,31.5,2.8); iw(29.5,8.2,32.0,8.2); iw(32.8,8.2,33.7,8.2); iw(29.5,8.2,29.5,11.0);
+iw(25.5,2.8,32.4,2.8); iw(33.3,2.8,33.7,2.8); iw(29.5,8.2,32.0,8.2); iw(32.8,8.2,33.7,8.2); iw(29.5,8.2,29.5,11.0);
 box(25.7,29.3,8.17,8.23,0.15,IH,M.glass,inner,false);
-iw(31.5,0,31.5,2.0); iw(31.5,2.7,31.5,4.0); iw(31.5,7.9,31.5,8.2);
+iw(31.5,0,31.5,1.9); iw(31.5,2.8,31.5,4.0); iw(31.5,7.9,31.5,8.2);
 iw(31.5,1.9,32.2,1.9); iw(33.0,1.9,33.7,1.9);
 iw(33.7,0,33.7,3.2); iw(33.7,4.1,33.7,5.0); iw(33.7,6.0,33.7,7.3); iw(33.7,8.2,33.7,11.0);
 iw(33.7,4.9,39.3,4.9); iw(33.7,6.1,39.3,6.1);
@@ -203,7 +203,7 @@ iw(39.3,0,39.3,0.9); iw(39.3,1.8,39.3,2.6); iw(39.3,8.4,39.3,9.3); iw(39.3,10.2,
 // interior hints
 box(19.45,19.95,2.6,4.5,0.15,1.0,M.wood,inner);                 // bàn thờ
 box(25.6,29.4,10.4,10.95,0.15,1.0,M.wood,inner); box(26.1,29.1,8.35,9.25,0.15,1.0,M.deck,inner); box(26.75,27.65,3.3,6.3,0.7,0.78,M.wood,inner); box(29.35,30.25,3.3,6.3,0.7,0.78,M.wood,inner);
-[[27.7,29.3,0.1,2.1],[31.6,33.6,9.2,10.8],[35.3,37.1,0.1,2.1],[35.3,37.1,8.9,10.9]].forEach(([a,b,c,d])=>box(a,b,c,d,0.15,0.55,M.white,inner));
+[[25.6,27.6,0.2,1.2],[25.6,27.6,1.6,2.6],[31.6,33.6,9.2,10.8],[35.3,37.1,0.1,2.1],[35.3,37.1,8.9,10.9]].forEach(([a,b,c,d])=>box(a,b,c,d,0.15,0.55,M.white,inner));
 box(19.85,20.15,6.2,8.2,0.15,2.4,M.wood,inner);   // lam gỗ bình phong
 box(21.0,24.3,5.7,6.6,0.15,0.75,new THREE.MeshStandardMaterial({color:0x9a9a94}),inner);
 
@@ -236,7 +236,7 @@ function makeLabel(text,d,w,y,size=1.1,grp=labels){
   const t=new THREE.CanvasTexture(c); t.colorSpace=THREE.SRGBColorSpace;
   const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:t,depthTest:false,transparent:true})); sp.scale.set(size*4,size,1); sp.position.set(d,y,w); grp.add(sp);
 }
-[['Gian thờ',17.7,3.5],['Sảnh vào',17.7,7.3],['Phòng khách',22.7,5.5],['Hiên',14.2,5.5],['Ngủ 3',28.5,1.6],['Phòng ăn',27,5.2],['Bếp nấu',27.5,9.7],['Ngủ 4',31.6,9.6],['Sảnh',32.6,5.5],['Ngủ chính 1',36.5,2.1],['Ngủ chính 2',36.5,8.9],['WC riêng',40.5,1.3],['WC riêng',40.5,9.7],['Hành lang',36.5,5.5],['WC khách',32.6,0.95],['Hiên sau',40.2,5.5]].forEach(([t,d,w])=>makeLabel(t,d,w,3.4,0.8));
+[['Gian thờ',17.7,3.5],['Sảnh vào',17.7,7.3],['Phòng khách',22.7,5.5],['Hiên',14.2,5.5],['Ngủ khách',28.5,1.6],['Phòng ăn',27,5.2],['Bếp nấu',27.5,9.7],['Ngủ 4',31.6,9.6],['Sảnh',32.6,5.5],['Ngủ chính 1',36.5,2.1],['Ngủ chính 2',36.5,8.9],['WC riêng',40.5,1.3],['WC riêng',40.5,9.7],['Hành lang',36.5,5.5],['WC',32.6,0.95],['Hiên sau',40.2,5.5]].forEach(([t,d,w])=>makeLabel(t,d,w,3.4,0.8));
 [['Garage',6,10.2],['Chòi nghỉ',47.1,3.5],['Sân phơi',46.2,10.2],['Kho giặt',43.1,10.7],['Hẻm 1 m',33.3,11.5],['WC sân',49,9.5],['Hồ cá',11.2,10.5]].forEach(([t,d,w])=>makeLabel(t,d,w,4.2,0.8,outLabels));
 labels.visible=false;
 
