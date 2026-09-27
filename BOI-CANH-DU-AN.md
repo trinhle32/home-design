@@ -22,6 +22,9 @@
 - Sân sau 8,3 m: kho giặt, sân phơi, chòi 5 x 5 + BBQ, WC sân vườn cạnh chòi.
 - Đã kiểm theo phong thủy (bảng trong mat-bang-nha-12x50.html). Chưa có hướng nhà và năm sinh gia chủ.
 
+## Ngân sách đã chốt
+- Gói vật tư tiêu chuẩn: nhà chính ≈ 2,52 tỷ, có dự phòng 10% ≈ 2,77 tỷ. Đất có sẵn, thiết kế đã có. Chưa gồm nội thất, garage, rào, sân, chòi, cây.
+
 ## File có sẵn trong thư mục này
 - mat-bang-nha-12x50.html / .png: mặt bằng tổng thể, mặt bằng công năng, bảng diện tích, nội thất, dự toán thô.
 - 3d-nha-12x50.html: mô hình khối Three.js, mở bằng trình duyệt. Tham số ?view=front|back|top|side và &roof=0 để ẩn mái.
