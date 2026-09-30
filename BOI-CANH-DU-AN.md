@@ -7,18 +7,18 @@
 - 1 phòng khách thông với bếp. Bếp có đảo dài và bàn ăn.
 - 1 gian thờ đặt ở vị trí đầu tiên của nhà, phải tránh WC.
 - Sân sau có sân phơi và chòi để nghỉ ngơi hoặc tiệc ngoài trời.
-- Hẻm 0,5 m bên hông ra sân sau.
+- Hẻm 1,5 m bên hông ra sân sau (đã nới từ 1 m cho dắt xe máy thoải mái).
 - Nội thất hiện đại tối giản, ít cây xanh, chỉ chậu nhỏ.
 
 ## Bố cục hiện tại (xem mat-bang-nha-12x50.html là bản chuẩn)
 - Sân trước 13 m: cổng bộ và cổng trượt, hồ cá cạnh lối đi bên trái cửa chính (nhìn từ trong ra), tiểu cảnh đá bên phải.
 - Garage 6,7 x 4,9 m có mái thép nối mái nhà, sát hông phải gian trước; cửa phụ từ garage vào phòng khách.
 - Gian trước 6 x 12,5 m, cách ranh trái 1 m, sân bên phải 5 m: hiên 2,5; gian thờ 4,5 x 3,5 (phòng đầu tiên) + sảnh vào 4,5 x 2,5; lam gỗ bình phong; phòng khách 5,5 x 6.
-- Gian ngang 11 x 13,8 m, hẻm 1 m bên phải thông ra sân sau.
-  - Hàng trước: ngủ khách 6 x 2,8, 2 giường đôi kê ngang, đầu tựa tường ranh, cửa mở từ phòng khách | phòng ăn 5,4 x 6 ở tâm nhà, giếng trời, 2 bàn 8 chỗ | bếp nấu 2,8 x 4,2 tựa tường hẻm, chậu inox 2 hố lệch 1,16 m (hố lớn 76 x 45 sâu 25), cửa phụ ra garage, đảo buffet 3 m.
-  - Hàng giữa: WC khách (cửa ra sảnh) | sảnh | phòng làm việc 2,8 x 4,1 có 1 giường đơn.
-  - Hàng sau: ngủ chính 1 và 2 (5,5 x 4,5) | hành lang 2 m ra hiên sau.
-  - 2 WC riêng 2,4 x 2,6 nhô ra sau dưới mái đua, hiên sau 5,8 m ở giữa.
+- Gian ngang 10,5 x 13,8 m, hẻm 1,5 m bên phải thông ra sân sau.
+  - Hàng trước: ngủ khách 6 x 2,8, 2 giường đôi kê ngang, đầu tựa tường ranh, cửa mở từ phòng khách | phòng ăn 4,9 x 6 ở tâm nhà, giếng trời, 2 bàn 8 chỗ | bếp nấu 2,8 x 4,2 tựa tường hẻm, chậu inox 2 hố lệch 1,16 m (hố lớn 76 x 45 sâu 25), cửa phụ ra garage, đảo buffet 3 m.
+  - Hàng giữa: WC khách (cửa ra sảnh) | sảnh, có bồn rửa tay rời tựa tường phòng ăn cạnh cửa WC khách | phòng làm việc 2,8 x 4,1 có 1 giường đơn.
+  - Hàng sau: ngủ chính 1 và 2 (5,5 x 4,25) | hành lang 2 m ra hiên sau.
+  - 2 WC riêng 2,4 x 2,6 nhô ra sau dưới mái đua, hiên sau 5,3 m ở giữa.
 - Sân sau 8,3 m: kho giặt, sân phơi, chòi 5 x 5 + BBQ, WC sân vườn cạnh chòi.
 - Đã kiểm theo phong thủy (bảng trong mat-bang-nha-12x50.html). Chưa có hướng nhà và năm sinh gia chủ.
 
@@ -26,6 +26,7 @@
 - Địa điểm: ngoại ô Phan Thiết (Bình Thuận cũ, nay thuộc Lâm Đồng). Giá trọn gói tiêu chuẩn ở đây 5,0–5,3 triệu/m² → nhà chính ≈ 2,45–2,6 tỷ có dự phòng. Khí hậu biển: thép mạ kẽm nhúng nóng, nhôm sơn tĩnh điện, inox 304, ngói bắt vít chống tốc, nên có cách nhiệt mái. Khi làm ảnh AI: bối cảnh nắng gắt miền biển, cây dừa, xương rồng, cát trắng hợp hơn vườn nhiệt đới rậm.
 - Gói vật tư tiêu chuẩn: gạch granite VN 60x120, sơn Dulux/Jotun, cửa nhôm Xingfa kính cường lực, thiết bị WC Inax/American Standard, đèn Panasonic/Philips.
 - Mái giữ nguyên: mái Nhật 4 mái, dốc 30°, đua 0,8 m, kèo thép mạ kẽm, ngói phẳng xám đen.
+- Máy lạnh 6 máy inverter: khách 24k và ăn 24k (âm trần cassette), 2 master 18k, ngủ khách 12k, làm việc 9k; gian thờ không lắp. Cục nóng: 3 ở hẻm (treo cao 2,2 m), 2 ở dải cây xanh trái, 1 ở sân sau sau WC riêng 1. Tủ điện tổng + tủ mạng ở sảnh giữa, điện 1 pha 63 A, chờ sạc xe điện ở garage, ống chờ điện mặt trời. Xem mục 3 trong mat-bang-nha-12x50.html.
 - Điện nước đi âm (dây Cadivi, PPR, PVC Bình Minh/Tiền Phong), bồn inox + bơm tăng áp. Làm thêm từ đầu: ống chờ máy lạnh 6 phòng, điện nước âm sàn tới đảo bếp, ống chờ nước nóng 4 WC, LAN + camera âm, ổ cắm ngoài trời, điện nước ngầm tới WC sân và kho giặt (25–40 triệu).
 - Ngân sách theo giá Phan Thiết: nhà chính 2,5–2,7 tỷ có dự phòng; cả nhà + rào cổng + garage + sân lát + dự phòng ≈ 2,84–3,15 tỷ. Chưa gồm nội thất (~0,4 tỷ), chòi và cây, san lấp, chuyển mục đích đất.
 - Pháp lý: đất ngoại ô Phan Thiết nhiều khả năng thuộc phường nên phải xin giấy phép; cần kiểm tra phần đất ở trong sổ đỏ đủ cho ~280 m² nhà + garage.

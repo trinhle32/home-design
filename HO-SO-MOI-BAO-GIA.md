@@ -18,12 +18,12 @@ Bản vẽ trên là thiết kế ý tưởng. Nhà thầu lập bản vẽ kế
 | Hạng mục | Số liệu |
 |---|---|
 | Gian trước | 6 x 12,5 m: hiên 2,5 m, gian thờ 4,5 x 3,5 m, sảnh vào 4,5 x 2,5 m, phòng khách 5,5 x 6 m |
-| Gian ngang | 11 x 13,8 m, cách ranh phải 1 m (hẻm), sát ranh trái |
-| Phòng | 2 phòng ngủ chính 5,5 x 4,5 m, 1 phòng ngủ khách 6 x 2,8 m, 1 phòng làm việc 4,1 x 2,8 m, phòng ăn 6 x 5,4 m có giếng trời, bếp nấu 4,2 x 2,8 m, sảnh |
-| WC | 2 WC riêng 2,4 x 2,6 m nhô ra sau, WC khách 2,3 x 1,9 m, WC sân vườn 2 x 2,2 m |
-| Diện tích trong tường | khoảng 224 m² |
-| Hiên có mái | khoảng 25 m² (hiên trước 15 m², hiên sau 10,4 m²) |
-| Cao độ | nền +0,45 m so với sân, trần +3,85 m, mép mái +4,05 m, đỉnh mái gian ngang khoảng +7,4 m |
+| Gian ngang | 10,5 x 13,8 m, cách ranh phải 1,5 m (hẻm), sát ranh trái |
+| Phòng | 2 phòng ngủ chính 5,5 x 4,25 m, 1 phòng ngủ khách 6 x 2,8 m, 1 phòng làm việc 4,1 x 2,8 m, phòng ăn 6 x 4,9 m có giếng trời, bếp nấu 4,2 x 2,8 m, sảnh |
+| WC | 2 WC riêng 2,4 x 2,6 m nhô ra sau, WC khách 2,3 x 1,9 m, WC sân vườn 2 x 2,2 m; bồn rửa tay rời (lavabo trên tủ) ngoài sảnh cạnh WC khách |
+| Diện tích trong tường | khoảng 217 m² |
+| Hiên có mái | khoảng 25 m² (hiên trước 15 m², hiên sau 9,5 m²) |
+| Cao độ | nền +0,45 m so với sân, trần +3,85 m, mép mái +4,05 m, đỉnh mái gian ngang khoảng +7,3 m |
 | Mái | mái Nhật 4 mái, dốc 30°, đua 0,8 m, kèo thép mạ kẽm nhúng nóng, ngói phẳng màu xám đen, bắt vít chống tốc |
 | Ngoài nhà | garage mái thép 6,7 x 4,9 m nối mái nhà; kho giặt 2,5 x 2,5 m; hàng rào gạch cao 1,8 m dài khoảng 118 m; cổng trượt 5 m có motor, cổng bộ; sân lát bê tông |
 
@@ -41,7 +41,7 @@ Bản vẽ trên là thiết kế ý tưởng. Nhà thầu lập bản vẽ kế
 ## 4. Hạng mục làm thêm (báo giá riêng từng dòng)
 
 1. Lớp cách nhiệt dưới ngói và thông gió áp mái.
-2. Ống chờ đồng máy lạnh âm tường cho 6 phòng.
+2. Ống chờ đồng máy lạnh âm tường cho 6 phòng, vị trí cục lạnh, cục nóng, tủ điện và ổ cắm theo mục 3 "Mặt bằng điện và máy lạnh" trong mat-bang-nha-12x50.html.
 3. Điện, nước đi âm sàn tới đảo bếp giữa phòng.
 4. Ống chờ nước nóng cho 4 WC.
 5. Dây mạng LAN và camera đi âm.
